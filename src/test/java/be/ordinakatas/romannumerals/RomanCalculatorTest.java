@@ -27,4 +27,11 @@ class RomanCalculatorTest {
         String result = romanCalculator.addNumbers("II","I");
         assertThat(result).isEqualTo("III");
     }
+
+
+    @Test
+    void addNumbers_IplusIII_returnsIV() {
+        String result = romanCalculator.addNumbers("I","III");
+        assertThat(result).isEqualTo("IV");
+    }
 }
