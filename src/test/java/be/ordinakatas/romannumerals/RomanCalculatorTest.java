@@ -58,8 +58,15 @@ class RomanCalculatorTest {
 
 
     @Test
-    void addNumbers_VplusI_returnsV() {
+    void addNumbers_VplusI_returnsVI() {
         String result = romanCalculator.addNumbers("V", "I");
+        assertThat(result).isEqualTo("VI");
+    }
+
+
+    @Test
+    void addNumbers_IplusV_returnsVI() {
+        String result = romanCalculator.addNumbers("I", "V");
         assertThat(result).isEqualTo("VI");
     }
 }
